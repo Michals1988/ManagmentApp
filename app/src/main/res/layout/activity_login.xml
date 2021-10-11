@@ -30,7 +30,7 @@
         <EditText
             android:id="@+id/text_login"
             android:background="@drawable/edit_round"
-            android:layout_width="250dp"
+            android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_marginTop="70dp"
             android:layout_gravity="center"
@@ -45,7 +45,7 @@
         <EditText
             android:id="@+id/text_password"
             android:background="@drawable/edit_round"
-            android:layout_width="250dp"
+            android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_marginTop="25dp"
             android:layout_gravity="center"
