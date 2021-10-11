@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Architectural Office</string>
+    <string name="email">Adres e-mail</string>
+    <string name="password">Hasło</string>
+    <string name="submit">Zaloguj</string>
+    <string name="forgotPassword">Zapomniałem hasła</string>
+</resources>
