@@ -4,15 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/buttonActualProject"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edit_round"
+            android:textColor="@color/black"
+            android:text="@string/actualProjects"
+            app:backgroundTint="@color/green"
+            />
+
+        <Button
+            android:id="@+id/buttonOldProject"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edit_round"
+            android:textColor="@color/black"
+            android:text="@string/oldProject"
+            app:backgroundTint="@color/green"/>
+
+        <Button
+            android:id="@+id/buttonClients"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edit_round"
+            android:textColor="@color/black"
+            android:text="@string/clients"
+            app:backgroundTint="@color/green"/>
+
+        <Button
+            android:id="@+id/buttonAddProject"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="240dp"
+            android:background="@drawable/edit_round"
+            android:textColor="@color/black"
+            android:text="@string/addProject"
+            app:backgroundTint="@color/green"/>
+
+        <Button
+            android:id="@+id/buttonAddClient"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edit_round"
+            android:textColor="@color/black"
+            android:text="@string/addClient"
+            app:backgroundTint="@color/green"/>
+
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

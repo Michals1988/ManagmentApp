@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "608752482405",
+    "project_id": "architecturaloffice-9fba9",
+    "storage_bucket": "architecturaloffice-9fba9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608752482405:android:b5c87b23e84c10140fae8c",
+        "android_client_info": {
+          "package_name": "com.example.pracainzynierska"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608752482405-mbovq3lisdp4abhbqmbr7f7nr38tvcu5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5rVV5d8VhXGxZR9YPFgQhiP_hMUPkC4E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608752482405-mbovq3lisdp4abhbqmbr7f7nr38tvcu5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
