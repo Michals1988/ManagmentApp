@@ -10,8 +10,12 @@ import android.os.Bundle;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 
+import com.example.pracainzynierska.AddNewClientPage.AddNewClientActivity;
+import com.example.pracainzynierska.AddNewProject.AddNewProjectActivity;
+import com.example.pracainzynierska.dataBase.DataBase;
 import com.example.pracainzynierska.loginPage.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -41,9 +45,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button buttonNewClient = findViewById(R.id.buttonAddClient);
         Button buttonNewProject = findViewById(R.id.buttonAddProject);
+        Button buttonClients = findViewById(R.id.buttonClients);
+        Button buttonLogout =findViewById(R.id.buttonLogOut);
 
         buttonNewClient.setOnClickListener(this);
         buttonNewProject.setOnClickListener(this);
+        buttonClients.setOnClickListener(this);
+        buttonLogout.setOnClickListener(this);
 
     }
 
@@ -53,12 +61,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.buttonAddClient:
-                FirebaseAuth.getInstance().signOut();
+                //
+                Intent intentAddClientPage = new Intent(this, AddNewClientActivity.class);
+                startActivity(intentAddClientPage);
                 break;
             case R.id.buttonAddProject:
+                Intent intentAddProject = new Intent(this, AddNewProjectActivity.class);
+                startActivity(intentAddProject);
+                break;
+            case R.id.buttonClients:
+                DataBase dataBase = new DataBase();
+                dataBase.setUserID(mAuth.getUid().toString());
+                dataBase.addClient(12, "Michal", "Seifert", "501503906", "65-001", "Zielona Góra", "Ptasia", "26", "6");
+                break;
+            case R.id.buttonLogOut:
+                FirebaseAuth.getInstance().signOut();
                 Intent intentLoginPage = new Intent(this, LoginActivity.class);
                 startActivity(intentLoginPage);
-                break;
+                Toast.makeText(MainActivity.this, "Zostałeś wylogowany.", Toast.LENGTH_LONG).show();
+                this.finish();
         }
 
     }

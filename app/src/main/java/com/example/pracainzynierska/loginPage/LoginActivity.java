@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.pracainzynierska.ForgottenPasswordActivity;
 import com.example.pracainzynierska.MainActivity;
 import com.example.pracainzynierska.R;
+import com.example.pracainzynierska.dataBase.DataBase;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -91,6 +92,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
+                                    String userId=mAuth.getCurrentUser().getUid().toString();
+                                    DataBase dataBase=new DataBase();
+                                    dataBase.checkDataBase(userId);
 
                                     Intent intentLogin = new Intent(LoginActivity.this, MainActivity.class);
                                     startActivity(intentLogin);

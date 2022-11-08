@@ -20,7 +20,7 @@
             android:id="@+id/appName"
             android:layout_marginTop="90dp"
             android:textSize="30sp"
-            android:textColor="@color/black"
+            android:textColor="@color/green"
             android:textStyle="bold|italic"
             android:gravity="center"
             android:layout_width="match_parent"

@@ -10,20 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracaInzynierska">
         <activity
+            android:name=".AddNewProject.AddNewProjectActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AddNewClientPage.AddNewClientActivity"
+            android:exported="true" />
+        <activity
+            android:name=".test"
+            android:exported="true" />
+        <activity
             android:name=".ForgottenPasswordActivity"
             android:exported="true" />
-
         <activity
             android:name=".loginPage.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
