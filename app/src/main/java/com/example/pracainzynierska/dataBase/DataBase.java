@@ -6,16 +6,18 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.example.pracainzynierska.AddNewProject.AddNewProjectActivity;
-import com.example.pracainzynierska.loginPage.LoginActivity;
+import com.example.pracainzynierska.clients.Client;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.gms.tasks.Tasks;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -54,12 +56,15 @@ public class DataBase {
     String projectInvestorName;
     String projectInvestorSurname;
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public DataBase() {
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void checkDataBase(String userID) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -74,7 +79,7 @@ public class DataBase {
                 .add(user);
     }
 
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void addClient(int clientId, String clientName, String clientSurname, String phoneNumber, String clientZipCode, String clientCity, String clientStreet, String clientHouseNumber, String clientFlatNumber) {
 
@@ -90,8 +95,6 @@ public class DataBase {
         client.put("street", clientStreet);
         client.put("houseNumber", clientHouseNumber);
         client.put("flatNumber", clientFlatNumber);
-
-
 
 
         db.collection("Architectural Office")
@@ -113,10 +116,11 @@ public class DataBase {
 
     }
 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public void addProject (int projectID, String projectName, String projectZipCode, String projectCity, String projectStreet,
-                            String projectHouseNumber, String projectFlatNumber, String projectConfine, String projectPlotNumber,
-                            String projectInvestorName, String projectInvestorSurname, Context context){
+    public void addProject(int projectID, String projectName, String projectZipCode, String projectCity, String projectStreet,
+                           String projectHouseNumber, String projectFlatNumber, String projectConfine, String projectPlotNumber,
+                           String projectInvestorName, String projectInvestorSurname, Context context) {
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -127,11 +131,12 @@ public class DataBase {
         project.put("city", projectCity);
         project.put("street", projectStreet);
         project.put("houseNumber", projectHouseNumber);
-        project.put("flatNumber",projectFlatNumber);
+        project.put("flatNumber", projectFlatNumber);
         project.put("confine", projectConfine);
         project.put("plotNUmber", projectPlotNumber);
-        project.put("investorName",projectInvestorName);
+        project.put("investorName", projectInvestorName);
         project.put("investorSurname", projectInvestorSurname);
+        project.put("actualProject", true);
 
         db.collection("Architectural Office")
                 .document(userID)
@@ -151,9 +156,73 @@ public class DataBase {
                         Toast.makeText(context, "Błąd zapisu", Toast.LENGTH_LONG).show();
                     }
                 });
-
     }
 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    public ArrayList<Client> showContacts() {
+
+
+        ArrayList<Client> mClient = new ArrayList<Client>();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        Client oneClient = new Client();
+
+        try {
+            QuerySnapshot taskResult=Tasks.await(db.collection("Architectural Office")
+                    .document(userID)
+                    .collection("Clients")
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if (task.isSuccessful()) {
+                                for (QueryDocumentSnapshot document : task.getResult()) {
+
+                                    oneClient.setDocumentId(document.getId());
+                                    if (document.get("name") != null) {
+                                        oneClient.setClientName(document.get("name").toString());
+                                    }
+                                    if (document.get("surname") != null) {
+                                        oneClient.setClientSurname(document.get("surname").toString());
+                                    }
+                                    if (document.get("phoneNumber") != null) {
+                                        oneClient.setClientPhoneNumber(document.get("phoneNumber").toString());
+                                    }
+                                    if (document.get("street") != null) {
+                                        oneClient.setClientStreet(document.get("street").toString());
+                                    }
+                                    if (document.get("city") != null) {
+                                        oneClient.setClientCity(document.get("city").toString());
+                                    }
+                                    if (document.get("zipCode") != null) {
+                                        oneClient.setClientZipCode(document.get("zipCode").toString());
+                                    }
+                                    if (document.get("houseNumber") != null) {
+                                        oneClient.setClientHouseNumber(document.get("houseNumber").toString());
+                                    }
+                                    if (document.get("flatNumber") != null) {
+                                        oneClient.setClientFlatNumber(document.get("flatNumber").toString());
+                                    }
+                                    mClient.add(oneClient);
+
+                                }
+
+                            } else {
+                                Log.d("Z bazy danych", "tutaj cos nie działa?");
+                            }
+                        }
+                    }));
+        } catch (Exception e) {
+        }
+
+        return mClient;
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
+
+
 
 

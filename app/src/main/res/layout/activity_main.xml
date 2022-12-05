@@ -17,27 +17,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/buttonActualProject"
+            android:id="@+id/buttonProjects"
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
             android:background="@drawable/edit_round"
+            android:text="@string/projects"
             android:textColor="@color/black"
-            android:text="@string/actualProjects"
-            app:backgroundTint="@color/green"
-            />
-
-        <Button
-            android:id="@+id/buttonOldProject"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/edit_round"
-            android:textColor="@color/black"
-            android:text="@string/oldProject"
-            app:backgroundTint="@color/green"/>
+            app:backgroundTint="@color/green" />
 
         <Button
             android:id="@+id/buttonClients"
@@ -46,20 +34,67 @@
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
             android:background="@drawable/edit_round"
-            android:textColor="@color/black"
             android:text="@string/clients"
-            app:backgroundTint="@color/green"/>
+            android:textColor="@color/black"
+            app:backgroundTint="@color/green" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow android:layout_margin="20dp">
+
+                <Button
+                    android:id="@+id/buttonlogBuilding"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:text="@string/logBuilding"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/green" />
+
+                <Button
+                    android:id="@+id/buttonSchedules"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:text="@string/schedules"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/green" />
+
+            </TableRow>
+        </TableLayout>
+
+
+        <Button
+            android:id="@+id/buttonAddSchdules"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/edit_round"
+            android:text="@string/addNewMeeting"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/green" />
+
 
         <Button
             android:id="@+id/buttonAddProject"
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/edit_round"
-            android:textColor="@color/black"
             android:text="@string/addProject"
-            app:backgroundTint="@color/green"/>
+            android:textColor="@color/black"
+            app:backgroundTint="@color/green" />
+
 
         <Button
             android:id="@+id/buttonAddClient"
@@ -68,24 +103,28 @@
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
             android:background="@drawable/edit_round"
-            android:textColor="@color/black"
             android:text="@string/addClient"
-            app:backgroundTint="@color/green"/>
+            android:textColor="@color/black"
+            app:backgroundTint="@color/green" />
 
         <Button
             android:id="@+id/buttonLogOut"
             android:layout_width="110dp"
             android:layout_height="50dp"
             android:layout_gravity="left"
-            android:layout_marginTop="40dp"
             android:layout_marginStart="85dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/edit_round"
-            android:textColor="@color/black"
             android:text="@string/Logout"
-            app:backgroundTint="@color/orange"/>
+            android:textColor="@color/black"
+            app:backgroundTint="@color/orange" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"></LinearLayout>
 
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

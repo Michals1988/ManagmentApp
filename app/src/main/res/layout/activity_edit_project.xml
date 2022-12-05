@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".projects.EditProjectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/textEditProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/editProjekt"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="30dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/editTextProjectNameEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:hint="@string/projectName"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/editTextZipCodeProjectEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:hint="@string/zipcode"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/editTextCityProjectEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:hint="@string/city"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/editTextStreetProjectEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:hint="@string/street"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/editTextHouseNumberProjectEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:hint="@string/houseNumber"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/editTextFlatNumberProjectEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:hint="@string/flatNumber"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/editTextConfineProjectEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:hint="@string/confine"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/editTextPlotNumberProject"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:hint="@string/plotNumber"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/editTextInvestorNameProjectEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:hint="@string/investorName"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/editTextInvestorSurnameProjectEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:hint="@string/investorSurname"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow>
+
+                <RadioGroup
+                    android:id="@+id/radioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/radioButtonActualProject"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="@string/newProject" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonOldProject"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="@string/oldProject" />
+
+                </RadioGroup>
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/buttonFindClientProjectEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:text="@string/findClient"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/green"
+                    tools:ignore="MissingConstraints" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="15dp">
+
+                <Button
+                    android:id="@+id/buttonDismissChangeEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:text="@string/dismissChange"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/green"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/buttonAcceptChangeProject"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:text="@string/acceptChange"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/green"
+                    tools:ignore="MissingConstraints" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginStart="75dp"
+                android:layout_marginEnd="75dp">
+
+                <Button
+                    android:id="@+id/buttonBackToMenuClient"
+                    android:layout_width="0dp"
+                    android:layout_margin="25dp"
+                    android:layout_marginEnd="150dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:gravity="center"
+                    android:text="@string/backToMenu"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/orange"
+                    tools:ignore="MissingConstraints" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

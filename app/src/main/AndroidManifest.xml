@@ -10,6 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracaInzynierska">
         <activity
+            android:name=".projects.ShowOneProjectActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/border" />
+
+        <activity
+            android:name=".projects.EditProjectActivity"
+            android:exported="true" />
+        <activity
+            android:name=".projects.OldProjectsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".projects.ActualProjectsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".projects.ProjectsMainPageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".clients.ClientsActivity"
+            android:exported="true" />
+        <activity
             android:name=".AddNewProject.AddNewProjectActivity"
             android:exported="true" />
         <activity

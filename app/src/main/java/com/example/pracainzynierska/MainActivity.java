@@ -15,8 +15,10 @@ import android.widget.Toast;
 
 import com.example.pracainzynierska.AddNewClientPage.AddNewClientActivity;
 import com.example.pracainzynierska.AddNewProject.AddNewProjectActivity;
+import com.example.pracainzynierska.clients.ClientsActivity;
 import com.example.pracainzynierska.dataBase.DataBase;
 import com.example.pracainzynierska.loginPage.LoginActivity;
+import com.example.pracainzynierska.projects.ProjectsMainPageActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -24,6 +26,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
+
 
     @Override
     public void onStart() {
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intentLoginPage = new Intent(this, LoginActivity.class);
             startActivity(intentLoginPage);
         }
+
     }
 
 
@@ -46,11 +50,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button buttonNewClient = findViewById(R.id.buttonAddClient);
         Button buttonNewProject = findViewById(R.id.buttonAddProject);
         Button buttonClients = findViewById(R.id.buttonClients);
+        Button buttonProjects=findViewById(R.id.buttonProjects);
         Button buttonLogout =findViewById(R.id.buttonLogOut);
 
         buttonNewClient.setOnClickListener(this);
         buttonNewProject.setOnClickListener(this);
         buttonClients.setOnClickListener(this);
+        buttonProjects.setOnClickListener(this);
         buttonLogout.setOnClickListener(this);
 
     }
@@ -65,15 +71,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intentAddClientPage = new Intent(this, AddNewClientActivity.class);
                 startActivity(intentAddClientPage);
                 break;
+
             case R.id.buttonAddProject:
                 Intent intentAddProject = new Intent(this, AddNewProjectActivity.class);
                 startActivity(intentAddProject);
                 break;
+
             case R.id.buttonClients:
-                DataBase dataBase = new DataBase();
-                dataBase.setUserID(mAuth.getUid().toString());
-                dataBase.addClient(12, "Michal", "Seifert", "501503906", "65-001", "Zielona Góra", "Ptasia", "26", "6");
+                Intent intentClients = new Intent(this, ClientsActivity.class);
+                startActivity(intentClients);
                 break;
+
+            case R.id.buttonProjects:
+                Intent intentProjects = new Intent(this, ProjectsMainPageActivity.class);
+                startActivity(intentProjects);
+                break;
+
             case R.id.buttonLogOut:
                 FirebaseAuth.getInstance().signOut();
                 Intent intentLoginPage = new Intent(this, LoginActivity.class);
