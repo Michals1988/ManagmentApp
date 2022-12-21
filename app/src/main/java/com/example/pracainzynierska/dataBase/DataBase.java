@@ -43,6 +43,7 @@ public class DataBase {
     String clientStreet;
     String clientHouseNumber;
     String clientFlatNumber;
+    String clientEmail;
 
     int projectID;
     String projectName;
@@ -81,7 +82,8 @@ public class DataBase {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public void addClient(int clientId, String clientName, String clientSurname, String phoneNumber, String clientZipCode, String clientCity, String clientStreet, String clientHouseNumber, String clientFlatNumber) {
+    public void addClient(int clientId, String clientName, String clientSurname, String clientStreet, String clientHouseNumber,
+                          String clientFlatNumber, String clientZipCode, String clientCity, String phoneNumber, String clientEmail, Context context  ) {
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -95,6 +97,8 @@ public class DataBase {
         client.put("street", clientStreet);
         client.put("houseNumber", clientHouseNumber);
         client.put("flatNumber", clientFlatNumber);
+        client.put("eMail", clientEmail);
+
 
 
         db.collection("Architectural Office")
@@ -105,12 +109,14 @@ public class DataBase {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
                         Log.d("DataBaseInfo", "DocumentSnapShot added with ID:" + documentReference.getId());
+                        Toast.makeText(context, "Klient został zapisany!", Toast.LENGTH_LONG).show();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Log.d("DataBaseInfo", "DataBaseError-the client was not added");
+                        Toast.makeText(context, "Błąd zapisu", Toast.LENGTH_LONG).show();
                     }
                 });
 

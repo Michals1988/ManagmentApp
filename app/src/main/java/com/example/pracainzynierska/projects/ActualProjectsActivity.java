@@ -17,9 +17,11 @@ import com.example.pracainzynierska.R;
 import com.example.pracainzynierska.clients.Client;
 import com.example.pracainzynierska.clients.ClientsAdapter;
 import com.example.pracainzynierska.dataBase.DataBase;
+import com.example.pracainzynierska.loginPage.LoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -29,6 +31,17 @@ import java.util.ArrayList;
 public class ActualProjectsActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            Intent intentLogin = new Intent(ActualProjectsActivity.this, MainActivity.class);
+            startActivity(intentLogin);
+        }
+    }
 
 
     @Override

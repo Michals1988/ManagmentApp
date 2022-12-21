@@ -14,6 +14,7 @@ public class Client {
     String clientStreet;
     String clientHouseNumber;
     String clientFlatNumber;
+    String clientEmail;
 
     public Client() {
         documentId = "12020";
@@ -25,6 +26,7 @@ public class Client {
         clientStreet = "ewr";
         clientHouseNumber = "23454t";
         clientFlatNumber = "hgr2";
+        clientEmail="a@wp.pl";
     }
 
     public String getDocumentId() {
@@ -105,6 +107,14 @@ public class Client {
 
     public void setClientFlatNumber(String clientFlatNumber) {
         this.clientFlatNumber = clientFlatNumber;
+    }
+
+    public String getClientEmail() {
+        return clientEmail;
+    }
+
+    public void setClientEmail(String clientEmail) {
+        this.clientEmail = clientEmail;
     }
 
 

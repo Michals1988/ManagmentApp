@@ -8,7 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
+import com.example.pracainzynierska.AddNewClientPage.AddNewClientActivity;
+import com.example.pracainzynierska.MainActivity;
 import com.example.pracainzynierska.R;
 import com.example.pracainzynierska.dataBase.DataBase;
 import com.example.pracainzynierska.loginPage.LoginActivity;
@@ -23,7 +27,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class ClientsActivity extends AppCompatActivity {
+public class ClientsActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
 
@@ -61,11 +65,14 @@ public class ClientsActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(new ClientsAdapter(client, recyclerView));
 
+        Button buttonNewClient = findViewById(R.id.buttonBackToMenuClient);
+
+        buttonNewClient.setOnClickListener((View.OnClickListener) this);
+
         ///////////////////////////////////////////////////////////////////////////////////////////
 
         ArrayList<Client> mClient = new ArrayList<Client>();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-
 
 
         db.collection("Architectural Office")
@@ -81,7 +88,7 @@ public class ClientsActivity extends AppCompatActivity {
                                 Client oneClient = new Client();
                                 oneClient.setDocumentId(document.getId());
                                 if (document.get("name") != null) {
-                                    oneClient.setClientName(document.get("name").toString());
+                                    oneClient.setClientName(document.get("name").toString() + " ");
                                 }
                                 if (document.get("surname") != null) {
                                     oneClient.setClientSurname(document.get("surname").toString());
@@ -119,11 +126,21 @@ public class ClientsActivity extends AppCompatActivity {
         ///////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-        }
-
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+
+            case R.id.buttonBackToMenuClient:
+                Intent intentMainMenu = new Intent(this, MainActivity.class);
+                startActivity(intentMainMenu);
+                this.finish();
+                break;
+        }
+    }
+
+}
 
 
 
