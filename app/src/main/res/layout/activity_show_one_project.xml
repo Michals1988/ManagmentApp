@@ -10,21 +10,23 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="1dp">
 
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center">
 
             <TextView
                 android:id="@+id/textViewProjectNameDesc"
                 android:layout_width="0dp"
-                android:layout_weight="2"
                 android:layout_height="100dp"
-                android:background="@drawable/my_border"
+                android:layout_weight="2"
+                android:background="@drawable/my_border_left"
                 android:gravity="center"
                 android:text="@string/projectName" />
 
@@ -33,110 +35,129 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_weight="4"
-                android:textAlignment="gravity"
+                android:background="@drawable/my_border_right"
                 android:gravity="center"
-                android:background="@drawable/my_border"
-                android:text="kgdjd"/>
+                android:text="kgdjd"
+                android:textAlignment="gravity" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
 
             <TextView
                 android:id="@+id/textViewCityDesc"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="50dp"
-                android:background="@drawable/my_border"
-                android:text="TextView" />
+                android:layout_weight="1"
+                android:background="@drawable/my_border_left"
+                android:gravity="center"
+                android:text="@string/city"
+                android:textAlignment="gravity" />
 
             <TextView
                 android:id="@+id/textViewCityZipCodeOne"
                 android:layout_width="0dp"
-                android:layout_weight="3"
                 android:layout_height="50dp"
-                android:background="@drawable/my_border"
-                android:text="TextView" />
+                android:layout_weight="3"
+                android:background="@drawable/my_border_right"
+                android:gravity="center"
+                android:text="TextView"
+                android:textAlignment="gravity" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
 
             <TextView
                 android:id="@+id/textViewStreetDesc"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:background="@drawable/my_border"
                 android:layout_height="50dp"
-                android:text="TextView" />
+                android:layout_weight="1"
+                android:background="@drawable/my_border_left"
+                android:gravity="center"
+                android:text="@string/street"
+                android:textAlignment="gravity" />
 
             <TextView
                 android:id="@+id/textViewStreetNumberOne"
                 android:layout_width="0dp"
-                android:layout_weight="3"
                 android:layout_height="50dp"
-                android:background="@drawable/my_border"
-                android:text="TextView" />
+                android:layout_weight="3"
+                android:background="@drawable/my_border_right"
+                android:gravity="center"
+                android:text="TextView"
+                android:textAlignment="gravity" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
 
             <TextView
                 android:id="@+id/textViewPlotNumberDesc"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="50dp"
-                android:background="@drawable/my_border"
-                android:text="TextView" />
+                android:layout_weight="1"
+                android:background="@drawable/my_border_left"
+                android:gravity="center"
+                android:text="@string/plot"
+                android:textAlignment="gravity" />
 
             <TextView
                 android:id="@+id/textViewConfinePlotNUmberOne"
                 android:layout_width="0dp"
-                android:layout_weight="3"
-                android:background="@drawable/my_border"
                 android:layout_height="50dp"
-                android:text="TextView" />
+                android:layout_weight="3"
+                android:background="@drawable/my_border_right"
+                android:gravity="center"
+                android:text="TextView"
+                android:textAlignment="gravity" />
         </TableRow>
-<TableRow>
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/edit_round"
-            android:text="Button" />
+        <TableRow android:layout_marginTop="40dp">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="0dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="50dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_round"
-            android:text="Button" />
-</TableRow>
-        <TableRow
-            android:layout_marginTop="50dp">
-        <Button
-            android:id="@+id/buttonBackToMenuClient"
-            android:layout_width="150dp"
-android:layout_weight="1"
-            android:layout_marginEnd="125dp"
-            android:layout_marginStart="125dp"
-            android:background="@drawable/edit_round"
-            android:gravity="center"
-            android:text="@string/backToMenu"
-            android:textColor="@color/black"
-            app:backgroundTint="@color/orange"
-            tools:ignore="MissingConstraints" />
+            <Button
+                android:id="@+id/buttonDeleteProject"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_round"
+                android:gravity="center"
+                android:text="@string/deleteProject"
+                android:textAlignment="gravity" />
+
+            <Button
+                android:id="@+id/buttonEditProject"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_round"
+                android:text="@string/editProject" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="50dp">
+
+            <Button
+                android:id="@+id/buttonBackToMenuProject"
+                android:layout_width="150dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginEnd="125dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_round"
+                android:gravity="center"
+                android:text="@string/backToMenu"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/orange"
+                tools:ignore="MissingConstraints" />
         </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

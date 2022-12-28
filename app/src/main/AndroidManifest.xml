@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracaInzynierska">
         <activity
+            android:name=".clients.ShowOneClientActivity"
+            android:exported="true" />
+        <activity
             android:name=".projects.ShowOneProjectActivity"
             android:exported="true" />
 

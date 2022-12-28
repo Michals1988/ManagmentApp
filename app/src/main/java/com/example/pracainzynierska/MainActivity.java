@@ -1,6 +1,7 @@
 package com.example.pracainzynierska;
 
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -16,9 +17,10 @@ import android.widget.Toast;
 import com.example.pracainzynierska.AddNewClientPage.AddNewClientActivity;
 import com.example.pracainzynierska.AddNewProject.AddNewProjectActivity;
 import com.example.pracainzynierska.clients.ClientsActivity;
-import com.example.pracainzynierska.dataBase.DataBase;
+
 import com.example.pracainzynierska.loginPage.LoginActivity;
 import com.example.pracainzynierska.projects.ProjectsMainPageActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -50,8 +52,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button buttonNewClient = findViewById(R.id.buttonAddClient);
         Button buttonNewProject = findViewById(R.id.buttonAddProject);
         Button buttonClients = findViewById(R.id.buttonClients);
-        Button buttonProjects=findViewById(R.id.buttonProjects);
-        Button buttonLogout =findViewById(R.id.buttonLogOut);
+        Button buttonProjects = findViewById(R.id.buttonProjects);
+        Button buttonLogout = findViewById(R.id.buttonLogOut);
 
         buttonNewClient.setOnClickListener(this);
         buttonNewProject.setOnClickListener(this);
@@ -88,11 +90,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.buttonLogOut:
-                FirebaseAuth.getInstance().signOut();
-                Intent intentLoginPage = new Intent(this, LoginActivity.class);
-                startActivity(intentLoginPage);
-                Toast.makeText(MainActivity.this, "Zostałeś wylogowany.", Toast.LENGTH_LONG).show();
-                this.finish();
+
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Wylogowanie")
+                        .setMessage("Napewno chcesz się wylogować?")
+                        .setPositiveButton(android.R.string.yes, (dialogInterface, i) -> {
+                            FirebaseAuth.getInstance().signOut();
+                            Intent intentLoginPage = new Intent(MainActivity.this, LoginActivity.class);
+                            startActivity(intentLoginPage);
+                            Toast.makeText(MainActivity.this, "Zostałeś wylogowany.", Toast.LENGTH_LONG).show();
+                            MainActivity.this.finish();
+                        })
+                        .setNegativeButton(android.R.string.no, null)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+
+
         }
 
     }

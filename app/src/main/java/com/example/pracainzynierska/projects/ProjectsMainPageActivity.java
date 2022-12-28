@@ -9,22 +9,12 @@ import android.widget.Button;
 
 import com.example.pracainzynierska.MainActivity;
 import com.example.pracainzynierska.R;
+import com.example.pracainzynierska.loginPage.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class ProjectsMainPageActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
-            Intent intentLogin = new Intent(ProjectsMainPageActivity.this, MainActivity.class);
-            startActivity(intentLogin);
-        }
-    }
 
 
     @Override

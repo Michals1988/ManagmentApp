@@ -40,11 +40,9 @@ public class AddNewProjectActivity extends AppCompatActivity implements View.OnC
 
         mAuth = FirebaseAuth.getInstance();
 
-        Button buttonFindClient = (Button) findViewById(R.id.buttonFindClientProject);
         Button buttonEndAddProject = (Button) findViewById(R.id.buttonEndAddProject);
         Button buttonBackToMenu = (Button) findViewById(R.id.buttonBackToMenuClient);
 
-        buttonFindClient.setOnClickListener(this);
         buttonEndAddProject.setOnClickListener(this);
         buttonBackToMenu.setOnClickListener(this);
 
@@ -65,9 +63,6 @@ public class AddNewProjectActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.buttonFindClientProject:
-
-                break;
 
             case R.id.buttonEndAddProject:
                 DataBase dataBase = new DataBase();

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".clients.ShowOneClientActivity">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textViewNamesurnameDesc"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="2"
+                android:background="@drawable/my_border_left"
+                android:gravity="center"
+                android:text="@string/nameSurname" />
+
+            <TextView
+                android:id="@+id/textViewNamesurnameOne"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:background="@drawable/my_border_right"
+                android:gravity="center"
+                android:text="kgdjd"
+                android:textAlignment="gravity" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/textViewCityClientDesc"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/my_border_left"
+                android:gravity="center"
+                android:text="@string/city"
+                android:textAlignment="gravity" />
+
+            <TextView
+                android:id="@+id/textViewCityZipCodeClientOne"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="3"
+                android:background="@drawable/my_border_right"
+                android:gravity="center"
+                android:text="TextView"
+                android:textAlignment="gravity" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/textViewStreetClientDesc"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/my_border_left"
+                android:gravity="center"
+                android:text="@string/street"
+                android:textAlignment="gravity" />
+
+            <TextView
+                android:id="@+id/textViewStreetNumberClientOne"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="3"
+                android:background="@drawable/my_border_right"
+                android:gravity="center"
+                android:text="TextView"
+                android:textAlignment="gravity" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/textViewPhoneNumberClientDesc"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/my_border_left"
+                android:gravity="center"
+                android:text="@string/numberPhone"
+                android:textAlignment="gravity" />
+
+            <TextView
+                android:id="@+id/textViewPhoneNumberClientOne"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="3"
+                android:background="@drawable/my_border_right"
+                android:gravity="center"
+                android:text="TextView"
+                android:textAlignment="gravity" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="40dp">
+
+            <Button
+                android:id="@+id/buttonDeleteClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_round"
+                android:gravity="center"
+                android:text="@string/deleteProject"
+                android:textAlignment="gravity" />
+
+            <Button
+                android:id="@+id/buttonEditClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_round"
+                android:text="@string/editProject" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="50dp">
+
+            <Button
+                android:id="@+id/buttonCallToClient"
+                android:layout_width="0dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_round"
+                android:gravity="center"
+                android:text="@string/call"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/green"
+                tools:ignore="MissingConstraints" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="50dp">
+
+            <Button
+                android:id="@+id/buttonBackToMenuProject"
+                android:layout_width="150dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginEnd="125dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_round"
+                android:gravity="center"
+                android:text="@string/backToMenu"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/orange"
+                tools:ignore="MissingConstraints" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

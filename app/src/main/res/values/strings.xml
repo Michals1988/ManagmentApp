@@ -28,7 +28,7 @@
     <string name="zipcode">Kod pocztowy</string>
     <string name="city">Miasto</string>
     <string name="numberPhone">Numer telefonu</string>
-    <string name="endAddClinet">Zakończ</string>
+    <string name="endAddClinet">Dodaj do bazy</string>
     <string name="nextClient">Następny klient</string>
     <string name="backToMenu">Powrót do menu</string>
     <string name="projectName">Nazwa zamierzenia budowlanego</string>
@@ -44,7 +44,12 @@
     <string name="acceptChange">Zaakceptuj zmiany</string>
     <string name="actualProject">Aktualny projekt</string>
     <string name="oldProject">Zakończony projekt</string>
+    <string name="editProject">Edytuj</string>
+    <string name="deleteProject">Usuń projekt</string>
+    <string name="plot">Działka</string>
+    <string name="call">Zadzwoń do klienta</string>
+    <string name="nameSurname">Imię i nazwisko</string>
+    <string name="deleteClient">Usuń klienta</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

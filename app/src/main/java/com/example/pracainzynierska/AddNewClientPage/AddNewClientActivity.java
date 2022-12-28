@@ -96,22 +96,28 @@ public class AddNewClientActivity extends AppCompatActivity implements View.OnCl
 
                 DataBase dataBaseNextClient = new DataBase();
                 dataBaseNextClient.setUserID(mAuth.getUid().toString());
+                if (name.getText().toString().equals("") ||
+                        surname.getText().toString().equals("") ||
+                        houseNumber.getText().toString().equals("") ||
+                        city.getText().toString().equals("")) {
+                    Toast.makeText(AddNewClientActivity.this, "Wprowadź wszystkie wymagane dane!", Toast.LENGTH_LONG).show();
+                } else {
+                    dataBaseNextClient.addClient(1,
+                            name.getText().toString(),
+                            surname.getText().toString(),
+                            street.getText().toString(),
+                            houseNumber.getText().toString(),
+                            flatNumber.getText().toString(),
+                            zipCode.getText().toString(),
+                            city.getText().toString(),
+                            phoneNumber.getText().toString(),
+                            eMail.getText().toString(),
+                            AddNewClientActivity.this);
 
-                dataBaseNextClient.addClient(1,
-                        name.getText().toString(),
-                        surname.getText().toString(),
-                        street.getText().toString(),
-                        houseNumber.getText().toString(),
-                        flatNumber.getText().toString(),
-                        zipCode.getText().toString(),
-                        city.getText().toString(),
-                        phoneNumber.getText().toString(),
-                        eMail.getText().toString(),
-                        AddNewClientActivity.this);
-
-                Intent intentAddNewClient = new Intent(this, AddNewClientActivity.class);
-                startActivity(intentAddNewClient);
-                this.finish();
+                    Intent intentAddNewClient = new Intent(this, AddNewClientActivity.class);
+                    startActivity(intentAddNewClient);
+                    this.finish();
+                }
                 break;
 
             case R.id.buttonBackToMenuClient:

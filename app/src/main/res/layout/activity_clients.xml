@@ -19,7 +19,7 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:text="TextView"
+            android:text="@string/clients"
             android:textAlignment="center"
             android:textColor="@color/green"
             android:textSize="30dp" />
@@ -27,7 +27,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewClientsList"
             android:layout_width="match_parent"
-            android:layout_height="450dp" />
+            android:layout_height="550dp" />
 
         <Button
             android:id="@+id/buttonBackToMenuClient"

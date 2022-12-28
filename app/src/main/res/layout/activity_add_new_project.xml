@@ -158,18 +158,6 @@
             android:layout_marginTop="45dp">
 
             <Button
-                android:id="@+id/buttonFindClientProject"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/edit_round"
-                android:text="@string/findClient"
-                android:textColor="@color/black"
-                app:backgroundTint="@color/green"
-                tools:ignore="MissingConstraints" />
-
-            <Button
                 android:id="@+id/buttonEndAddProject"
                 android:layout_width="0dp"
                 android:layout_height="50dp"

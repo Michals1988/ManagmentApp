@@ -1,5 +1,6 @@
 package com.example.pracainzynierska.clients;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pracainzynierska.R;
+import com.example.pracainzynierska.projects.Project;
+import com.example.pracainzynierska.projects.ShowOneProjectActivity;
 
 import java.util.ArrayList;
 
@@ -45,6 +48,27 @@ public class ClientsAdapter extends RecyclerView.Adapter {
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, final int viewType) {
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.clients_list_listview, viewGroup, false);
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Client client = new Client();
+                int positionToOpen = mRecyclerView.getChildAdapterPosition(v);
+
+                client = mClient.get(positionToOpen);
+
+                String idClient = String.valueOf(client.getDocumentId());
+
+                Intent intentOpenContact = new Intent(v.getContext(), ShowOneClientActivity.class);
+                String documentID = client.getDocumentId();
+
+                intentOpenContact.putExtra("documentID", documentID);
+
+                v.getContext().startActivity(intentOpenContact);
+
+
+            }
+        });
 
 
         return new MyViewHolder(view);
