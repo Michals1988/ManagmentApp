@@ -5,20 +5,28 @@
       <map>
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/drawable/editTextLeft.xml" value="0.2703125" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/drawable/edit_round.xml" value="0.1648148148148148" />
+        <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/drawable/edit_text_left.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/drawable/gradient.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/drawable/ic_customer_add.xml" value="0.2703125" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26615384615384613" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/drawable/my_border.xml" value="0.2703125" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/drawable/my_borderLEFT.xml" value="0.2703125" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/drawable/my_borderRight.xml" value="0.2703125" />
+        <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/drawable/my_border_left.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/drawable/my_border_left_white.xml" value="0.2703125" />
+        <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/drawable/my_border_right.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/drawable/my_border_right_white.xml" value="0.2703125" />
+        <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/drawable/my_border_white.xml" value="0.2703125" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/activity_actual_projects.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/activity_add_new_client.xml" value="0.2" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/activity_add_new_project.xml" value="0.2" />
-        <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/activity_clients.xml" value="0.10384615384615385" />
+        <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/activity_clients.xml" value="0.2" />
+        <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/activity_edit_client.xml" value="0.264" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/activity_edit_project.xml" value="0.18691588785046728" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/activity_forgotten_password.xml" value="0.264" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/activity_login.xml" value="0.2139917695473251" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/activity_main.xml" value="0.23233695652173914" />
+        <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/activity_meet.xml" value="0.176" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/activity_old_projects.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/activity_projects_main_page.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/activity_show_one_client.xml" value="0.26666666666666666" />
@@ -30,7 +38,7 @@
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/content_main.xml" value="0.13489583333333333" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/fragment_customers_list.xml" value="0.22780797101449277" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/navigation_drawer.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/project_list_listview.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/layout/project_list_listview.xml" value="0.536" />
         <entry key="..\:/Users/jezu1/OneDrive/Pulpit/PracaInzynierska/app/src/main/res/menu/drawer_menu.xml" value="0.264" />
       </map>
     </option>

@@ -74,7 +74,7 @@ public class AddNewClientActivity extends AppCompatActivity implements View.OnCl
                         city.getText().toString().equals("")) {
                     Toast.makeText(AddNewClientActivity.this, "Wprowadź wszystkie wymagane dane!", Toast.LENGTH_LONG).show();
                 } else {
-                    dataBase.addClient(1,
+                    dataBase.addClient(
                             name.getText().toString(),
                             surname.getText().toString(),
                             street.getText().toString(),
@@ -102,7 +102,7 @@ public class AddNewClientActivity extends AppCompatActivity implements View.OnCl
                         city.getText().toString().equals("")) {
                     Toast.makeText(AddNewClientActivity.this, "Wprowadź wszystkie wymagane dane!", Toast.LENGTH_LONG).show();
                 } else {
-                    dataBaseNextClient.addClient(1,
+                    dataBaseNextClient.addClient(
                             name.getText().toString(),
                             surname.getText().toString(),
                             street.getText().toString(),

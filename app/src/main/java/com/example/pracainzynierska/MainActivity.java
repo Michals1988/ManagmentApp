@@ -19,6 +19,7 @@ import com.example.pracainzynierska.AddNewProject.AddNewProjectActivity;
 import com.example.pracainzynierska.clients.ClientsActivity;
 
 import com.example.pracainzynierska.loginPage.LoginActivity;
+import com.example.pracainzynierska.meeting.MeetActivity;
 import com.example.pracainzynierska.projects.ProjectsMainPageActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -54,12 +55,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button buttonClients = findViewById(R.id.buttonClients);
         Button buttonProjects = findViewById(R.id.buttonProjects);
         Button buttonLogout = findViewById(R.id.buttonLogOut);
+        Button buttonNewMeeting=findViewById(R.id.buttonAddSchdules);
 
         buttonNewClient.setOnClickListener(this);
         buttonNewProject.setOnClickListener(this);
         buttonClients.setOnClickListener(this);
         buttonProjects.setOnClickListener(this);
         buttonLogout.setOnClickListener(this);
+        buttonNewMeeting.setOnClickListener(this);
 
     }
 
@@ -87,6 +90,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonProjects:
                 Intent intentProjects = new Intent(this, ProjectsMainPageActivity.class);
                 startActivity(intentProjects);
+                break;
+
+            case R.id.buttonAddSchdules:
+                Intent intentNewMeeting=new Intent(this, MeetActivity.class);
+                startActivity(intentNewMeeting);
                 break;
 
             case R.id.buttonLogOut:

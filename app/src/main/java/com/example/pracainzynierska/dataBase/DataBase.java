@@ -82,13 +82,12 @@ public class DataBase {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public void addClient(int clientId, String clientName, String clientSurname, String clientStreet, String clientHouseNumber,
+    public void addClient(String clientName, String clientSurname, String clientStreet, String clientHouseNumber,
                           String clientFlatNumber, String clientZipCode, String clientCity, String phoneNumber, String clientEmail, Context context  ) {
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         Map<String, Object> client = new HashMap<>();
-        client.put("clientID", clientId);
         client.put("name", clientName);
         client.put("surname", clientSurname);
         client.put("phoneNumber", phoneNumber);
@@ -121,8 +120,55 @@ public class DataBase {
                 });
 
     }
-
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    public void updateClient(String clientName,
+                             String clientSurname,
+                             String clientStreet,
+                             String clientHouseNumber,
+                             String clientFlatNumber,
+                             String clientZipCode,
+                             String clientCity,
+                             String phoneNumber,
+                             String clientEmail,
+                             Context context,
+                             String documentID) {
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        Map<String, Object> client = new HashMap<>();
+        client.put("name", clientName);
+        client.put("surname", clientSurname);
+        client.put("phoneNumber", phoneNumber);
+        client.put("zipCode", clientZipCode);
+        client.put("city", clientCity);
+        client.put("street", clientStreet);
+        client.put("houseNumber", clientHouseNumber);
+        client.put("flatNumber", clientFlatNumber);
+        client.put("eMail", clientEmail);
+
+
+        db.collection("Architectural Office")
+                .document(userID)
+                .collection("Clients")
+                .document(documentID)
+                .update(client)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(context, "Kontakt został zaktualizowany!", Toast.LENGTH_LONG).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(context, "Aktualizacja nie powiodła się!", Toast.LENGTH_LONG).show();
+                    }
+                });
+
+    }
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void addProject(int projectID, String projectName, String projectZipCode, String projectCity, String projectStreet,
                            String projectHouseNumber, String projectFlatNumber, String projectConfine, String projectPlotNumber,
@@ -159,7 +205,7 @@ public class DataBase {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Log.d("DataBaseInfo", "DataBaseError-the project was not added");
-                        Toast.makeText(context, "Błąd zapisu", Toast.LENGTH_LONG).show();
+                        Toast.makeText(context, "Błąd zapisu!", Toast.LENGTH_LONG).show();
                     }
                 });
     }

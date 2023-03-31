@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".meeting.MeetActivity">
+
+    <LinearLayout
+        android:layout_width="415dp"
+        android:layout_height="684dp"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/addNewMeeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/addNewMeeting"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/meetTitle"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:background="@drawable/my_border_left_white"
+                android:gravity="center"
+                android:text="@string/titleMeet"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/editTextTitleMeet"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/my_border_right_white"
+                android:ems="10"
+                android:hint="Z kim się spotykasz?"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/meetDescription"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/my_border_left_white"
+                android:gravity="center"
+                android:text="@string/descriptionMeet"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/editTextDescriptionMeet"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/my_border_right_white"
+                android:ems="10"
+                android:hint="Krótki opis"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/meetLocation"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:background="@drawable/my_border_left_white"
+                android:gravity="center"
+                android:text="@string/locationMeet"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/editTextLocationMeet"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/my_border_right_white"
+                android:ems="10"
+                android:hint="Miejsce spotkania"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/ic_menu_month" />
+
+            <TextView
+                android:id="@+id/textViewDateMeet"
+                android:layout_width="wrap_content"
+                android:layout_height="66dp"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:background="@drawable/my_border_white"
+                android:gravity="center"
+                android:hint="Data spotkania" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+            <TextView
+                android:id="@+id/textViewTimeMeet"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:background="@drawable/my_border_white"
+                android:gravity="center"
+                android:hint="Godzina spotkania" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp">
+
+                <Button
+                    android:id="@+id/buttonDissmissMeet"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:text="@string/meetDismiss"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/green"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/buttonAddNewMeet"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:text="@string/meetAddNew"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/green"
+                    tools:ignore="MissingConstraints" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginStart="75dp"
+                android:layout_marginEnd="75dp">
+
+                <Button
+                    android:id="@+id/buttonBackToMenuClient"
+                    android:layout_width="0dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginEnd="150dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:gravity="center"
+                    android:text="@string/backToMenu"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/orange"
+                    tools:ignore="MissingConstraints" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

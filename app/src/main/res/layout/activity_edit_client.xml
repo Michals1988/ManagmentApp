@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".clients.EditClientActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/newClientText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/editClient"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="30dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editTextNameClientEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:hint="@string/name"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/editTextSurnameClientEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:hint="@string/surname"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/editTextStreetClientEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="7"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="@string/street"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/editTextHouseNumberClientEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="@string/houseNumber"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/editTextFlatNumberClientEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="@string/flatNumber"
+                    android:textAlignment="center"
+                    tools:ignore="MissingConstraints" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/editTextZipCodeClientEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/edit_round"
+                    android:layout_weight="3"
+                    android:layout_margin="10dp"
+                    android:ems="10"
+                    android:inputType="textPostalAddress"
+                    android:hint="@string/zipcode"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/editTextCityClientEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="7"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:inputType="textPostalAddress"
+                    android:hint="@string/city"
+                    android:textAlignment="center" />
+
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/editTextPhoneClientEdit"
+                    android:layout_width="360dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/edit_round"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:hint="@string/numberPhone"
+                    android:textAlignment="center"
+                    tools:ignore="MissingConstraints" />
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/editTextEmailClientEdit"
+                    android:layout_width="360dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/edit_round"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email"
+                    android:textAlignment="center"
+                    tools:ignore="MissingConstraints" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="45dp"
+                android:layout_gravity="center">
+                <Button
+                    android:id="@+id/buttonDismissChengeClient"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edit_round"
+                    android:text="@string/dismissChange"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/red"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/buttonEndAddClientEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edit_round"
+                    android:text="@string/acceptChange"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/green"
+                    tools:ignore="MissingConstraints" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginEnd="75dp"
+                android:layout_marginStart="75dp">
+                <Button
+                    android:id="@+id/buttonBackToMenuClientEdit"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="25dp"
+                    android:layout_marginEnd="150dp"
+                    android:gravity="center"
+                    android:text="@string/backToMenu"
+                    android:background="@drawable/edit_round"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/orange"
+                    tools:ignore="MissingConstraints" />
+            </TableRow>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </TableLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

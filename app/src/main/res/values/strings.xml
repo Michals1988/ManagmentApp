@@ -50,6 +50,14 @@
     <string name="call">Zadzwoń do klienta</string>
     <string name="nameSurname">Imię i nazwisko</string>
     <string name="deleteClient">Usuń klienta</string>
+    <string name="editClient">Edycja dancyh klienta</string>
+    <string name="meetDismiss">Anuluj</string>
+    <string name="meetAddNew">Dodaj do kalendarza</string>
+    <string name="addNewMeet">Dodaj nowe spotkanie</string>
+    <string name="titleMeet">Tytuł:</string>
+    <string name="descriptionMeet">Opis:</string>
+    <string name="locationMeet">Lokalizacja:</string>
+
 
 
 </resources>

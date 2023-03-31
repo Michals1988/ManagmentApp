@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,8 +29,9 @@ import java.util.regex.Pattern;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
-    TextView textViewEmail, textViewPassword;
+    EditText textViewEmail, textViewPassword;
     String login, password;
+
 
     @Override
     public void onStart() {
@@ -51,8 +53,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         mAuth = FirebaseAuth.getInstance();
 
-        textViewEmail = (TextView) findViewById(R.id.text_login);
-        textViewPassword = (TextView) findViewById(R.id.text_password);
+        textViewEmail = (EditText) findViewById(R.id.text_login);
+        textViewPassword = (EditText) findViewById(R.id.text_password);
 
         TextView buttonReminder = (TextView) findViewById(R.id.text_forgotPassword);
         Button buttonLogin = (Button) findViewById(R.id.button_login);
